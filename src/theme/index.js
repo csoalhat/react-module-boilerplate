@@ -3,11 +3,11 @@
 const theme = require('./theme');
 
 // Export configured plugin for use with `babel-plugin-css-modules-transform`.
-module.exports = config =>
-  require('postcss-custom-properties')(Object.assign(
-    {
+module.exports = options =>
+  require('postcss-preset-env')(Object.assign({
+    'css-variables': {
       variables: theme,
       preserve: true,
     },
-    config
-  ));
+    options,
+  }));

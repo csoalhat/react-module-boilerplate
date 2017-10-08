@@ -18,7 +18,11 @@ module.exports = baseConfig => {
       {
         loader: 'postcss-loader',
         options: {
-          plugins: [require('../src/theme')({ appendVariables: true })],
+          plugins: [
+            require('../src/theme')({
+              'css-variables': { appendVariables: true },
+            }),
+          ],
         },
       },
     ],

@@ -20,7 +20,7 @@ module.exports = baseConfig => {
         options: {
           plugins: [
             require('../src/theme')({
-              'css-variables': { appendVariables: true },
+              features: { 'css-variables': { appendVariables: true } },
             }),
           ],
         },
